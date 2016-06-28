@@ -15,7 +15,7 @@ int main(int argc, const char * argv[]) {
         char inputChar[1];
         int myNumber;
         
-        
+    
         
         printf("Enter a string:\n");
         fgets(myString,255,stdin);
@@ -27,6 +27,9 @@ int main(int argc, const char * argv[]) {
         
         NSLog(@"Input was: %@", convertedString);
 
+
+        
+        
         printf("\nWhat would you like to do?\n");
         printf("(1) Uppercase \n");
         printf("(2) Lowercase \n");
@@ -58,7 +61,10 @@ int main(int argc, const char * argv[]) {
                 break;
                 
             case 4:
-                NSLog(@"Result is: %@", [convertedString stringByAppendingString:@"eh?"]);
+                //
+                //mymutableString = [convertedString stringByAppendingString:@"eh?"];
+                mymutableString = [mymutableString stringByReplacingOccurrencesOfString:@"\n" withString:@" "];
+                NSLog(@"Result is: %@", [mymutableString stringByAppendingString:@"eh?"]);
                 break;
                 
             case 5:
