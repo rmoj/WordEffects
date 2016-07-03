@@ -13,16 +13,12 @@ int main(int argc, const char * argv[]) {
         
         char myString[255];
         char inputChar[2];
-    //    char userInput[2];
-      //  NSMutableString *responseNewOperation = @"Y";
-        
         long myNumber;
         
         printf("Enter a string:\n");
         fgets(myString,255,stdin);
         
         NSString *convertedString = [NSString stringWithUTF8String:myString];
-        //NSMutableString *mymutableString = [[[convertedString mutableCopy] stringByTrimmingCharactersInSet:[NSCharacterSet whitespaceCharacterSet]]copy];
         NSMutableString *mymutableString = [[convertedString stringByTrimmingCharactersInSet:[NSCharacterSet whitespaceAndNewlineCharacterSet]]copy];
         NSInteger myInteger = [convertedString integerValue];
         
@@ -41,15 +37,8 @@ int main(int argc, const char * argv[]) {
             
             fgets(inputChar,255,stdin);
             NSString *inputString = [NSString stringWithUTF8String:inputChar];
-            
-            //return [[inputString stringByTrimmingCharactersInSet: [NSCharacterSet whitespaceAndNewlineCharacterSet]] mutableCopy];
-            //myNumber = [[NSString stringWithFormat:@"%s", inputChar] integerValue];
             myNumber = [inputString integerValue];
-            //myNumber = (int) inputString;
-            //myNumber = (int)inputChar;
-            
-            //NSLog(@"myNumber is %ld",myNumber);
-            
+
             switch (myNumber) {
                     
                 case 1:
